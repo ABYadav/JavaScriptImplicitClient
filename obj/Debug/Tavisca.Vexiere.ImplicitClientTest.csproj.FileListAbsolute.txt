@@ -1,0 +1,4 @@
+D:\JavaScriptImplicitClient\bin\JavaScriptImplicitClient.dll
+D:\JavaScriptImplicitClient\bin\JavaScriptImplicitClient.pdb
+D:\JavaScriptImplicitClient\obj\Debug\JavaScriptImplicitClient.dll
+D:\JavaScriptImplicitClient\obj\Debug\JavaScriptImplicitClient.pdb
