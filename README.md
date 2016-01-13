@@ -8,6 +8,8 @@ The implicit grant type does not support refresh tokens.
 The implicit grant flow basically works as follows: the user is asked to authorize the application, then the authorization server passes the access token back to the user-agent, which passes it to the application. If you are curious about the details, read on.
 Is used for browser-based (web) or mobile applications, where you can't secure client secret so yopu can't use it to obtain access token.
 
+![implicit_flow](https://cloud.githubusercontent.com/assets/15729226/12294653/2cb1b1d4-ba22-11e5-9116-2c738fbce808.png)
+
 Request for access token:
 
 GET //oauth.presenter.url/authorization?response_type=token&client_id=CLIENT_ID&redirect_uri=REDIRECT_URI&scope=email
