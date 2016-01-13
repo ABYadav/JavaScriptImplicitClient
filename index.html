@@ -16,7 +16,7 @@
               <div class="col-sm-6">
             <ul class="list-unstyled list-inline">
                 <li>
-                    <button class="btn btn-default" style="Width:470px;" ng-click="request('openid http://www.vexiere.com/oauth/app_name/Root_Default_App', 'id_token token')">Login with facebook</button></li>
+                    <button class="btn btn-default" style="Width:470px;" ng-click="request('openid', 'id_token token')">Login with facebook</button></li>
                
                   
             </ul>
@@ -30,7 +30,7 @@
             <ul class="list-unstyled list-inline">
                  
                  <li>
-                    <button class="btn btn-default" style="Width:470px;" ng-click="requestVexieredb('openid http://www.vexiere.com/oauth/app_name/Root_Default_App', 'id_token token')">Login with vexiere</button></li>
+                    <button class="btn btn-default" style="Width:470px;" ng-click="requestVexieredb('openid', 'id_token token')">Login with vexiere</button></li>
           
             </ul>
                   </div>
@@ -191,7 +191,7 @@
 
         app.controller("OAuthCtrl", function ($scope, $window, storage, $location, signingCertificate) {
             var oauth = new OAuthClient("https://idp.vexiere.com:4443/issue/oidc/authorize");
-            //var oauth = new OAuthClient("https://qa-vexiere.tavisca.com/Vexiere3.0/issue/oidc/authorize");
+            
             var store = storage.create("js_implicit_demo");
 
             $scope.response = {};
