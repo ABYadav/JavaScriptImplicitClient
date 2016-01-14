@@ -30,7 +30,7 @@
             <ul class="list-unstyled list-inline">
                  
                  <li>
-                    <button class="btn btn-default" style="Width:470px;" ng-click="requestVexieredb('openid', 'id_token token')">Login with vexiere</button></li>
+                    <button class="btn btn-default" style="Width:470px;" ng-click="requestdb('openid', 'id_token token')">Login with DB</button></li>
           
             </ul>
                   </div>
@@ -130,7 +130,7 @@
 
         function retrieve_user_info(access_token) {
             $.ajax({
-                url: 'https://idp.vexiere.com:4443/issue/oidc/userinfo',
+                url: 'https://idp.site.com:4443/issue/oidc/userinfo',
                 headers: {
                     Authorization: "Bearer " + access_token
                 },
@@ -190,7 +190,7 @@
         });
 
         app.controller("OAuthCtrl", function ($scope, $window, storage, $location, signingCertificate) {
-            var oauth = new OAuthClient("https://idp.vexiere.com:4443/issue/oidc/authorize");
+            var oauth = new OAuthClient("https://idp.site.com:4443/issue/oidc/authorize");
             
             var store = storage.create("js_implicit_demo");
 
@@ -252,12 +252,12 @@
             //    childWindow = $window.open(req.url, "_blank", "height=400,width=400");
             //}
 
-            $scope.requestVexieredb = function (scope, responseType) {
+            $scope.requestdb = function (scope, responseType) {
                 var req = oauth.createImplicitFlowRequest(
                     "1",
                     "https://localhost:44300/callback.html",
                     scope,
-                    responseType, "vexieredb", "popup");
+                    responseType, "db", "popup");
 
                 store.set(req.state);
                 //  $window.location = req.url;
